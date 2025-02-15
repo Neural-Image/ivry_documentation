@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Ivry CLI Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+欢迎来到 Ivry CLI 文档中心。请使用左侧导航浏览各个章节：
+- [快速开始](getting-started.md)
+- [命令参考](reference.md)
+- [故障排查](troubleshooting.md)
+- [更新日志](changelog.md)

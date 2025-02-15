@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: Ivry CLI Documentation
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - CLI Reference: reference.md
+  - Troubleshooting: troubleshooting.md
+  - Changelog: changelog.md
