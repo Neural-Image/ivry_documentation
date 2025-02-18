@@ -1,28 +1,52 @@
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/project-x.git
-   cd project-x
-   ```
-2. Install the CLI:
-   ```bash
-   cd ivry_cli
-   pip install -e .
-   ```
+# **Installation Guide**
+
+Ivry supports **macOS, Windows, and Ubuntu**. Follow the steps below to install and set up Ivry on your system.
 
 ---
 
-## Authentication
+# macOS Installation
 
-1. Retrieve your API key from our website.
-2. Login using the CLI:
-   ```bash
-   project-x login --auth_token {your_apikey}
-   ```
+### **Prerequisites**
+- macOS **10.15+**
+- Python **3.10+**
+- **Homebrew** (for package management)
+- **Git** (to clone the repository)
+
+### **Installation Steps**
+**1. Install Cloudflared**
+
+Install Cloudflared to ensure your network safety
+```bash
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+dpkg -i cloudflared-linux-amd64.deb
+```
+
+**2. Clone the Ivry repository**
+
+```bash
+git clone https://github.com/neural-image/ivry.git
+```
+
+**3. Install the CLI**
+
+```bash
+cd ivry_cli
+pip install -e .
+```
+
+
+**4. Authenticate using an API key**
+
+You need to go to our website and become a developer to get the apikey [ivry website](https://ivry.co/account)
+
+And then, login from ivry cli:
+```bash
+ivry login --auth_token YOUR_API_KEY
+```
 
 ---
 
-## Initializing a Project
+**5. Initializing a Project**
 
 Currently, the CLI supports two modes: `comfyui` and `model`.
 
@@ -44,7 +68,7 @@ Once initialized, a project folder is created, and a `predict.py` file will be a
 
 ---
 
-## Uploading Your Project
+**6. Uploading Your Project**
 
 ### Important: Use Absolute Paths in `predict.py`
 
@@ -65,7 +89,7 @@ project-x upload_app
 
 ---
 
-## Managing Your Model
+**7. Managing Your Model**
 
 ### Check Uploaded Models
 ```bash
@@ -85,19 +109,10 @@ project-x update_app --model_id {model_id}
 
 ---
 
-## Hosting Your Project
+**8. Hosting Your Project**
 
 ### Start the Server
-#### Linux:
-```bash
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-dpkg -i cloudflared-linux-amd64.deb
-```
-#### macOS:
-```bash
-brew install cloudflare/cloudflare/cloudflared
-```
-#### Start the Project:
+
 ```bash
 cd {project_name}
 project-x start_server
@@ -110,7 +125,7 @@ project-x stop_server
 
 ---
 
-## Troubleshooting
+**9. Troubleshooting**
 
 ### WebSocket Issues
 If you encounter WebSocket errors when starting the server, try:

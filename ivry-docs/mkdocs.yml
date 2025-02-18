@@ -2,8 +2,13 @@ site_name: Ivry CLI Documentation
 theme:
   name: material
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
+  - Inreoduction : index.md
+  - Getting Started:
+      - WebUI (All platform supported): 
+          - WebUI Installation: webui.md
+          - WebUI usage: webui_usage.md
+      - Linux Installation: getting-started/linux.md
+      - Mac Installation: getting-started/mac.md
   - CLI Reference: reference.md
   - Troubleshooting: troubleshooting.md
   - Changelog: changelog.md
