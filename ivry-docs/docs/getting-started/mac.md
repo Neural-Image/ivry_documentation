@@ -1,130 +1,144 @@
-# **Installation Guide**
+# **Macos Installation Guide**
 
-Ivry supports **macOS, Windows, and Ubuntu**. Follow the steps below to install and set up Ivry on your system.
+## **1. Clone the ivry_cli repository**
+
+ ```bash
+ git clone https://github.com/Neural-Image/ivry_cli.git -b comfyUI
+ ```
 
 ---
-
-# macOS Installation
-
-### **Prerequisites**
-- macOS **10.15+**
-- Python **3.10+**
-- **Homebrew** (for package management)
-- **Git** (to clone the repository)
-
-### **Installation Steps**
-**1. Install Cloudflared**
-
-Install Cloudflared to ensure your network safety
-```bash
-brew install cloudflare/cloudflare/cloudflared
-```
-
-**2. Clone the Ivry repository**
-
-```bash
-git clone https://github.com/neural-image/ivry.git
-```
-
-**3. Install the CLI**
+## **2. Install the CLI**
 
 ```bash
 cd ivry_cli
-pip install -e .
 ```
 
+```bash
+./install.sh
+```
 
-**4. Authenticate using an API key**
+if you encounter a permission error:
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+you can check your installation by
+```bash
+ivry_cli
+```
+
+It will show a simple introduction to the cli, you could use "q" to quit
+
+---
+
+## **3. Authenticate using an API key**
 
 You need to go to our website and become a developer to get the apikey [ivry website](https://ivry.co/account)
 
 And then, login from ivry cli:
 ```bash
-ivry login --auth_token YOUR_API_KEY
+ivry login YOUR_API_KEY
 ```
 
 ---
 
-**5. Initializing a Project**
+## **4. Create Your App**
 
-Currently, the CLI supports two modes: `comfyui` and `model`.
+ we support comfyUI apps and python apps.
 
-```bash
-project-x init_app --project_name {project_name} --mode {comfyui/model}
-```
+### **For ComfyUI creator:**
 
-### Examples:
-- For **ComfyUI**:
-  ```bash
-  project-x init_app --project_name my_project --mode comfyui
-  ```
-- For **Model-based projects**:
-  ```bash
-  project-x init_app --project_name my_project --mode model
-  ```
+1. Create your app on [ivry website](https://www.ivry.co/login)
 
-Once initialized, a project folder is created, and a `predict.py` file will be available. Edit `predict.py` according to your model or workflow requirements.
+2. Pull your project to cli (windows users):
 
----
+    When using ComfyUI with Ivry CLI, ensure:
 
-**6. Uploading Your Project**
+    a. ComfyUI is running with the `--listen` flag to enable API access
 
-### Important: Use Absolute Paths in `predict.py`
+    b. Port 8188 (or your configured port) is accessible
 
-Your `predict.py` file is located under:
-```bash
-/ivry_cli/{project_name}/predict.py
-```
-Modify the script as needed, following the provided comments, and then upload your app:
+      ```bash
+      ivry_cli pull_project --app_id your_app_id # you can specify your port by adding --comfyui_port
+      ```
 
-```bash
-project-x upload_app --model_name {project_name}
-```
-Or navigate to the project directory and execute:
-```bash
-cd {project_name}
-project-x upload_app
-```
+    Example:
 
----
+      ```bash
+      ivry_cli pull_project --app_id 123 
+      ```
 
-**7. Managing Your Model**
+     You can see your project locate at: /ivry_project/comfyUI_project/app_{your_app_id}/
 
-### Check Uploaded Models
-```bash
-project-x list_models
-```
+### **For Python creator:**
 
-### Update an Existing Model
-If you update `predict.py` after uploading, you can update your model:
-```bash
-project-x update_app --model_id {model_id} --model_name {project_name}
-```
-Or use:
-```bash
-cd {project_name}
-project-x update_app --model_id {model_id}
-```
+1. Create your predict.py 
 
----
+    You could find a template in /src/templates/predict.py
 
-**8. Hosting Your Project**
+    After you finished it, please save it to the root of the repo:
+    ```
+    --comfyui_workflow
+    --docs
+    --src
+    -predict.py
+    -READEME.md
+    ```
 
-### Start the Server
+2. Generate predict_signature.json 
+   
+      ```bash
+      ivry_cli parse_predict
+      ```
+   
+     That will generate a predict_signature.json file in the same directory, we will use it later
 
-```bash
-cd {project_name}
-project-x start_server
-```
+3. Create your app on [ivry website](https://www.ivry.co/login)
 
-### Stop the Server
-```bash
-project-x stop_server
-```
+4. Pull your project to cli (windows users):
+
+      ```bash
+      ivry_cli pull_project --app_id your_app_id
+      ```
+
+    Example:
+
+      ```bash
+      ivry_cli pull_project --app_id 123
+      ```
 
 ---
 
-**9. Troubleshooting**
+## **5. Host Your App**
+
+Start both the ivry_cli model server and cloudflared tunnel:
+
+ ```bash
+ cd path/to/your/app
+ ivry_cli run_server --force
+ ```
+
+### Specify a project path
+
+ Please make sure your current path is at the root directory of the cli
+
+ ```bash
+ ivry_cli run_server --project project_folder_name --force #like app_30
+ ```
+
+### Stopping the Server
+
+ ```bash
+ # Stop all running ivry services
+ ivry_cli stop_server [--project_path PATH] [--force]
+ ```
+
+The `--force` option allows you to terminate services that may be stuck or not responding to normal shutdown commands.
+
+---
+
+## **6. Troubleshooting**
 
 ### WebSocket Issues
 If you encounter WebSocket errors when starting the server, try:

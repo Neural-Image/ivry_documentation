@@ -10,6 +10,9 @@ Before installing Ivry CLI, ensure you have:
 - Administrator privileges on your Windows account
 - 8GB of RAM or more (recommended)
 
+
+---
+
 ## **Step 1: Install Windows Subsystem for Linux 2 (WSL2)**
 
 First, we need to enable WSL2 and install a Linux distribution.
@@ -59,6 +62,9 @@ If you encounter any issues or want to install a specific Linux distribution, yo
 
 7. Install Ubuntu from the [Microsoft Store](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)
 
+
+---
+
 ## **Step 2: Install Python and Required Dependencies**
 
 1. **Importing the WSL2 Image**
@@ -104,6 +110,7 @@ If you encounter any issues or want to install a specific Linux distribution, yo
 
     It will show a simple introduction to ivry_cli, you could use "q" to quit
 
+---
 ## **Step 3: Create your app**
 
 We support comfyUI apps and python apps.
@@ -186,6 +193,7 @@ We support comfyUI apps and python apps.
       ivry_cli pull_project --app_id 123
       ```
 
+---
 ## **Step 4: Host your app**
 
  Start both the ivry_cli model server and cloudflared tunnel:
@@ -212,6 +220,7 @@ We support comfyUI apps and python apps.
 
 The `--force` option allows you to terminate services that may be stuck or not responding to normal shutdown commands.
 
+---
 ## Troubleshooting Windows Installation
 
 ### WSL Installation Issues
