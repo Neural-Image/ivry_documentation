@@ -1,65 +1,53 @@
-# **Ivry CLI Documentation**
+# Ivry CLI Documentation
 
-## **1. Introduction**
+## Introduction
 
-### **What is Ivry?**
-Ivry is a command-line interface (CLI) tool designed for managing AI workflows, deploying models, and automating cloud-based inference services. It provides an intuitive and efficient way to initialize AI projects, manage cloud deployments, and interact with frameworks like ComfyUI.
+Ivry CLI is a powerful command-line interface tool designed to simplify the process of creating, managing, and deploying AI applications. It provides seamless integration with ComfyUI workflows and supports various AI model deployment scenarios.
 
-Ivry supports **both command-line and web-based interfaces**, making it easy to manage AI models through a terminal or a graphical WebUI.
+### What is Ivry?
 
----
+Ivry is a platform that allows AI creators to easily build, deploy, and share their AI applications. The Ivry CLI tool is the command-line interface that provides direct access to the Ivry platform, enabling you to:
 
-## **Key Features**
-Ivry provides a wide range of functionalities to streamline AI model execution and deployment:
+- Initialize new AI projects
+- Manage authentication with the Ivry platform
+- Pull existing projects from the Ivry server
+- Run and monitor your AI services
+- Deploy your applications with secure tunneling
 
-### **1. AI Project Initialization**
-- **Quickly set up a new project** with `ivry init_app <project_name>`.
-- Uses pre-configured templates to simplify AI model development.
+### Key Features
 
-### **2. Web-based User Interface (WebUI)**
-- **Built-in WebUI** (`ui.py`) for managing workflows visually.
-- Allows **real-time model monitoring and execution** through a browser.
-- Runs locally but can be accessed remotely if needed.
+- **Simple Project Initialization**: Create new ComfyUI or custom model projects with a single command
+- **Seamless Authentication**: Secure login with API tokens
+- **Project Management**: List, pull, and manage your applications
+- **Service Orchestration**: Start, stop, and monitor your AI services
+- **Automatic Tunneling**: Integrated Cloudflare tunnel support for secure public access
+- **Process Management**: Built-in PM2 integration for reliable process management
+- **Comprehensive Logging**: Monitor your application's performance and troubleshoot issues
 
-### **3. AI Model Deployment**
-- **Upload models to the cloud** with `ivry upload_app`.
-- **Update existing models** using `ivry update_app` without downtime.
-- Store and retrieve model credentials securely.
+### Who Should Use Ivry CLI?
 
-### **4. Server Management**
-- **Start a model server** with `ivry start_server`.
-- **Stop active servers** using `ivry stop_server`.
-- Run AI inference as a service.
+Ivry CLI is designed for:
 
-### **5. WebSocket Communication**
-- Integrates with **ComfyUI** for interactive AI workflows.
-- Real-time data exchange via WebSocket (`websocket_comfyui.py`).
+- **AI Developers** who want to deploy their models for public consumption
+- **ComfyUI Workflow Creators** who want to share their workflows as applications
+- **Data Scientists** who need to deploy models in a production environment
+- **AI Enthusiasts** who want to experiment with sharing their creations
 
-### **6. Cloud Automation**
-- **Cloudflare API integration** to automate deployments.
-- **Remote AI inference** using `tunnel_config.yaml`.
+## Getting Started
 
-### **7. CLI Utility Commands**
-- Retrieve API keys, manage credentials, and parse model configurations.
+To get started with Ivry CLI, you'll need to:
 
----
+1. [Install Ivry CLI](getting-started/installation.md) on your system
+2. Authenticate with your Ivry API key
+3. Initialize your first project
 
-## **Use Cases**
-Ivry is designed for **AI engineers, researchers, and automation developers** who need a streamlined CLI tool for:
+Check out the [Getting Started](getting-started/overview.md) guide for detailed instructions.
 
-✅ **Initializing AI projects with minimal setup.**  
-✅ **Managing AI models via a WebUI or CLI interface.**  
-✅ **Deploying AI models to the cloud for production inference.**  
-✅ **Automating AI workflows with real-time WebSocket integration.**  
+## System Requirements
 
----
-## **Next Steps**
-Now that you have an overview of Ivry’s capabilities, let’s move on to the **Installation** section, where we’ll cover system requirements, dependencies, and how to get started.
-
-🚀 **Next:** 
-
-[Ubuntu Installation Guide](getting-started/linux.md) →
-
-[macOS Installation Guide](getting-started/mac.md) →
-
-[Windows Installation Guide](getting-started/windows.md) →
+- **Python**: 3.9 or higher
+- **OS**: Windows (with WSL2), macOS, or Linux
+- **Dependencies**: 
+  - Node.js and npm
+  - PM2 (installed automatically)
+  - Cloudflared (installed automatically on Linux)
