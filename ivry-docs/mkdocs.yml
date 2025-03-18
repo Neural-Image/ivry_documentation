@@ -1,6 +1,9 @@
 site_name: Ivry CLI Documentation
 theme:
   name: material
+  features:
+    - content.code.copy
+    - content.code.annotate 
 nav:
   - Introduction : index.md
   - Getting Started:
@@ -10,3 +13,10 @@ nav:
   - CLI Reference: reference.md
   - Troubleshooting: troubleshooting.md
   - Changelog: changelog.md
+extra_css:
+- stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.superfences
+  - def_list
+  - attr_list
+  - md_in_html

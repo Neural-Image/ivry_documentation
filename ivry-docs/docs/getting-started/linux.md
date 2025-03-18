@@ -1,39 +1,35 @@
-# **Installation Guide**
+# **Linux Installation Guide**
 
-Ivry supports **macOS, Windows, and Ubuntu**. Follow the steps below to install and set up Ivry on your system.
+## **Step 1: Install ivry_cli**
 
----
-
-# macOS Installation
-
-### **Prerequisites**
-- macOS **10.15+**
-- Python **3.10+**
-- **Homebrew** (for package management)
-- **Git** (to clone the repository)
-
-### **Installation Steps**
-**1. Install Cloudflared**
-
-Install Cloudflared to ensure your network safety
-```bash
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-dpkg -i cloudflared-linux-amd64.deb
-```
-
-**2. Clone the Ivry repository**
+**1. Clone the ivry_cli repository**
 
 ```bash
-git clone https://github.com/neural-image/ivry.git
+git clone https://github.com/Neural-Image/ivry_cli.git -b comfyUI
 ```
 
-**3. Install the CLI**
+**2. Install the CLI**
 
 ```bash
 cd ivry_cli
-pip install -e .
 ```
 
+```bash
+./install.sh
+```
+
+if you encounter a permission error:
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+you can check your installation by
+```bash
+ivry_cli
+```
+
+It will show a simple introduction to the cli, you could use "q" to quit
 
 **4. Authenticate using an API key**
 

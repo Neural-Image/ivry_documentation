@@ -37,11 +37,9 @@ Ivry CLI is designed for:
 
 To get started with Ivry CLI, you'll need to:
 
-1. [Install Ivry CLI](getting-started/installation.md) on your system
+1. [Install Ivry CLI](getting-started.md) on your system
 2. Authenticate with your Ivry API key
 3. Initialize your first project
-
-Check out the [Getting Started](getting-started/overview.md) guide for detailed instructions.
 
 ## System Requirements
 
