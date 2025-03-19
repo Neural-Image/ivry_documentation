@@ -70,6 +70,7 @@ If you encounter any issues or want to install a specific Linux distribution, yo
 1. **Importing the WSL2 Image**
 
     A preconfigured WSL2 image is available for download:
+    
     [Download WSL2 Image](https://drive.google.com/file/d/10vf-E5ylGC6YuHYWnAbQOMaJhIO0WocS/view?usp=sharing)
 
     To import the WSL2 environment, use the following command:
