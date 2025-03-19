@@ -1,0 +1,9 @@
+ol {
+    counter-reset: list-number;
+}
+ol > li {
+    counter-increment: list-number;
+}
+ol > li::marker {
+    content: counter(list-number) ". ";
+}
