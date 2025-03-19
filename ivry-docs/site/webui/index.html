@@ -16,7 +16,7 @@
     
     
       
-        <title>🚀 Getting Started - Ivry CLI Documentation</title>
+        <title>Ivry WebUI Guide - Ivry CLI Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#ivry-webui-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🚀 Getting Started
+              Ivry WebUI Guide
             
           </span>
         </div>
@@ -246,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/" class="md-nav__link">
+      <a href="../getting-started/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -268,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/" class="md-nav__link">
+      <a href="../getting-started/linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -290,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mac/" class="md-nav__link">
+      <a href="../getting-started/mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,9 +402,141 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choose-your-operating-system" class="md-nav__link">
+  <a href="#webui-on-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Choose Your Operating System
+      WebUI on Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebUI on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-unlocking-features-and-install-wsl2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Unlocking features and install wsl2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Unlocking features and install wsl2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-use-install-bat-to-install-wsl2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 use install bat to install wsl2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 reboot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-init-wsl2-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Init wsl2 environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Init wsl2 environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-install-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 install requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Run webui
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webui-on-macos-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebUI on macOS / Ubuntu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebUI on macOS / Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-cloudflared" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install Cloudflared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clone-the-ivry-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clone the Ivry repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Install the CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-run-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Run webui
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshots
     </span>
   </a>
   
@@ -426,18 +558,58 @@
 
 
 
-<h1 id="getting-started">🚀 Getting Started</h1>
-<p>Welcome to <strong>ivry-docs</strong>! Please select your operating system below to proceed with the installation guide. 👇</p>
-<h2 id="choose-your-operating-system">💻 Choose Your Operating System</h2>
-<p>=== "Windows"
-    📌 If you're using <strong>Windows</strong>, click the button below to access the installation guide:</p>
-<p><a href="windows/"><img alt="Windows Guide" src="https://img.shields.io/badge/Windows-Guide-blue?style=for-the-badge&amp;logo=windows" /></a></p>
-<p>=== "macOS"
-    🍏 If you're using <strong>macOS</strong>, click the button below to access the installation guide:</p>
-<p><a href="mac/"><img alt="Mac Guide" src="https://img.shields.io/badge/macOS-Guide-black?style=for-the-badge&amp;logo=apple" /></a></p>
-<p>=== "Linux"
-    🐧 If you're using <strong>Linux</strong>, click the button below to access the installation guide:</p>
-<p><a href="linux/"><img alt="Linux Guide" src="https://img.shields.io/badge/Linux-Guide-green?style=for-the-badge&amp;logo=linux" /></a></p>
+<h1 id="ivry-webui-guide"><strong>Ivry WebUI Guide</strong></h1>
+<p>Ivry provides a <strong>Gradio-based WebUI</strong> that allows users to interact with models visually. This guide explains how to launch, configure, and troubleshoot the WebUI on <strong>Windows</strong> and <strong>macOS/Ubuntu</strong>.</p>
+<hr />
+<h2 id="webui-on-windows"><strong>WebUI on Windows</strong></h2>
+<h3 id="1-unlocking-features-and-install-wsl2">1. Unlocking features and install wsl2</h3>
+<h4 id="11-use-install-bat-to-install-wsl2">1.1 use install bat to install wsl2</h4>
+<p>Open wsl_install.bat as an administrator.</p>
+<ul>
+<li>Right click -&gt; Run as administrator...</li>
+</ul>
+<p>You should see: </p>
+<p><img alt="Output from running the above commands successfully." src="../assets/images/wsl_install.png" /></p>
+<p>If you cannot run this file successfully, try:</p>
+<p>Go to microsoft store and install <a href="https://apps.microsoft.com/detail/9pn20msr04dw?ocid=webpdpshare">ubuntu-22.04</a></p>
+<h4 id="12-reboot">1.2 reboot</h4>
+<p>Before moving forward, make sure you reboot your computer so that Windows 11 will have WSL2 and virtualization available to it.</p>
+<h3 id="2-init-wsl2-environment">2. Init wsl2 environment</h3>
+<h4 id="21-install-requirements">2.1 install requirements</h4>
+<p>Install requirements by </p>
+<div class="highlight"><pre><span></span><code>.<span class="w"> </span>install.sh
+</code></pre></div>
+<p>note: if your wsl cannot do apt update, you can open install.sh in notebook and copy paste each steps</p>
+<h3 id="3-run-webui">3. Run webui</h3>
+<p>Run webui by:
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>ui.py
+</code></pre></div></p>
+<h2 id="webui-on-macos-ubuntu"><strong>WebUI on macOS / Ubuntu</strong></h2>
+<h3 id="1-install-cloudflared">1. Install Cloudflared</h3>
+<p>Install Cloudflared to ensure your network safety</p>
+<p>macOS:
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>cloudflare/cloudflare/cloudflared
+</code></pre></div></p>
+<p>Ubuntu:
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+dpkg<span class="w"> </span>-i<span class="w"> </span>cloudflared-linux-amd64.deb
+</code></pre></div></p>
+<h3 id="2-clone-the-ivry-repository">2. Clone the Ivry repository</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/neural-image/ivry.git
+</code></pre></div>
+<h3 id="3-install-the-cli">3. Install the CLI</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>ivry_cli
+.<span class="w"> </span>install.sh
+</code></pre></div>
+<h3 id="4-run-webui">4. Run webui</h3>
+<p>Run webui by:
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>ui.py
+</code></pre></div></p>
+<h2 id="troubleshots"><strong>Troubleshots</strong></h2>
+<p>If you encounter websocket problem, you could try to reinstall websocket by:
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>uninstall<span class="w"> </span>websockets
+pip<span class="w"> </span>install<span class="w"> </span>websockets
+</code></pre></div></p>
 
 
 

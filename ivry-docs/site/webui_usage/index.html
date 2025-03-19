@@ -16,7 +16,7 @@
     
     
       
-        <title>🚀 Getting Started - Ivry CLI Documentation</title>
+        <title>Ivry WebUI Guide - Ivry CLI Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#ivry-webui-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🚀 Getting Started
+              Ivry WebUI Guide
             
           </span>
         </div>
@@ -246,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="windows/" class="md-nav__link">
+      <a href="../getting-started/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -268,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/" class="md-nav__link">
+      <a href="../getting-started/linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -290,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mac/" class="md-nav__link">
+      <a href="../getting-started/mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,11 +402,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choose-your-operating-system" class="md-nav__link">
+  <a href="#1-login-from-webui" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Choose Your Operating System
+      1. Login from Webui
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. Login from Webui">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch accounts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -426,18 +441,20 @@
 
 
 
-<h1 id="getting-started">🚀 Getting Started</h1>
-<p>Welcome to <strong>ivry-docs</strong>! Please select your operating system below to proceed with the installation guide. 👇</p>
-<h2 id="choose-your-operating-system">💻 Choose Your Operating System</h2>
-<p>=== "Windows"
-    📌 If you're using <strong>Windows</strong>, click the button below to access the installation guide:</p>
-<p><a href="windows/"><img alt="Windows Guide" src="https://img.shields.io/badge/Windows-Guide-blue?style=for-the-badge&amp;logo=windows" /></a></p>
-<p>=== "macOS"
-    🍏 If you're using <strong>macOS</strong>, click the button below to access the installation guide:</p>
-<p><a href="mac/"><img alt="Mac Guide" src="https://img.shields.io/badge/macOS-Guide-black?style=for-the-badge&amp;logo=apple" /></a></p>
-<p>=== "Linux"
-    🐧 If you're using <strong>Linux</strong>, click the button below to access the installation guide:</p>
-<p><a href="linux/"><img alt="Linux Guide" src="https://img.shields.io/badge/Linux-Guide-green?style=for-the-badge&amp;logo=linux" /></a></p>
+<h1 id="ivry-webui-guide"><strong>Ivry WebUI Guide</strong></h1>
+<p>Ivry provides a <strong>Gradio-based WebUI</strong> that allows users to interact with models visually. This guide explains how to launch, configure, and troubleshoot the WebUI on <strong>Windows</strong> and <strong>macOS/Ubuntu</strong>.</p>
+<hr />
+<p><strong>For windows users</strong></p>
+<p>Each time enter wsl2, please make sure your enabled the venv. You can activate your venv by:
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>myenv/bin/activate<span class="w"> </span><span class="c1">#if you use install.sh to install the environment</span>
+</code></pre></div></p>
+<h2 id="1-login-from-webui">1. Login from Webui</h2>
+<p>Log in and save your authentication credentials on your computer to ensure smooth operation in subsequent steps.
+You can easily login from webui by getting apikey from ivry website:</p>
+<p><img alt="webui login" src="../assets/gif/ivrylogin.gif" /></p>
+<p><strong>You only need do this once</strong>, so for next time, you don't need to login again as long as token.txt is located in your machine</p>
+<h3 id="switch-accounts">switch accounts</h3>
+<p>You can switch accounts by login again with different apikey.</p>
 
 
 
