@@ -23,6 +23,11 @@ chmod +x install.sh
 ./install.sh
 ```
 
+```bash
+source ~/.zshrc
+```
+
+
 you can check your installation by
 ```bash
 ivry_cli
