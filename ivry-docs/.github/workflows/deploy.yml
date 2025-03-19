@@ -1,0 +1,27 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 当 main 分支有更新时触发部署
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # 选择 Python 3.x 版本
+
+      - name: Install MkDocs and Dependencies
+        run: |
+          pip install mkdocs mkdocs-material  # 如果有额外插件，请在这里安装
+
+      - name: Deploy MkDocs
+        run: |
+          mkdocs gh-deploy --force
