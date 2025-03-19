@@ -72,6 +72,7 @@ If you encounter any issues or want to install a specific Linux distribution, yo
     A preconfigured WSL2 image is available for download:
 
     [Download WSL2 Image](https://drive.google.com/file/d/10vf-E5ylGC6YuHYWnAbQOMaJhIO0WocS/view?usp=sharing)
+    
     To import the WSL2 environment, use the following command:
 
       ```powershell
@@ -81,7 +82,7 @@ If you encounter any issues or want to install a specific Linux distribution, yo
     Example:
 
       ```powershell
-      wsl --import ivry-cli C:\WSL\Ubuntu C:\User\Downloads\ivry-cli.tar   
+      wsl --import ivry-cli C:\WSL\Ubuntu C:\Users\Downloads\ivry-cli.tar   
       ```
 
     Once imported, start the WSL2 instance with:
