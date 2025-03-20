@@ -33,6 +33,18 @@ you can check your installation by
 ivry_cli
 ```
 
+and check pm2 installation by
+
+```bash
+pm2
+```
+
+if your pm2 could not found, you could use
+
+```bash
+npm install -g pm2
+```
+
 It will show a simple introduction to the cli, you could use "q" to quit
 
 ---
