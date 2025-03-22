@@ -54,13 +54,7 @@ If you encounter any issues or want to install a specific Linux distribution, yo
       wsl --set-default-version 2
       ```
 
-6. **Set WSL2 as the default:**
-
-      ```powershell
-      wsl --set-default-version 2
-      ```
-
-7. Install Ubuntu from the [Microsoft Store](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)
+6. Install Ubuntu from the [Microsoft Store](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)
 
 
 ---
@@ -74,15 +68,16 @@ If you encounter any issues or want to install a specific Linux distribution, yo
     [Download WSL2 Image](https://drive.google.com/file/d/10vf-E5ylGC6YuHYWnAbQOMaJhIO0WocS/view?usp=sharing)
     
     To import the WSL2 environment, use the following command:
+    Note: You need to make sure you already created the directory for your wsl
 
       ```powershell
-      wsl --import ivry-cli <path_to_wsl_directory> <path_to_image.tar>
+      wsl --import ivry-cli <path_you_want_to_put_wsl> <path_to_image.tar>
       ```
 
     Example:
 
       ```powershell
-      wsl --import ivry-cli C:\WSL\Ubuntu C:\Users\Downloads\ivry-cli.tar   
+      wsl --import ivry-cli C:\WSL C:\Users\Downloads\ivry-cli.tar   
       ```
 
     Once imported, start the WSL2 instance with:

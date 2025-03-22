@@ -787,11 +787,6 @@
 </code></pre></div>
 </li>
 <li>
-<p><strong>Set WSL2 as the default:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
-</code></pre></div>
-</li>
-<li>
 <p>Install Ubuntu from the <a href="https://www.microsoft.com/store/productId/9PDXGNCFSCZV">Microsoft Store</a></p>
 </li>
 </ol>
@@ -801,12 +796,13 @@
 <li>
 <p><strong>Importing the WSL2 Image</strong></p>
 <p>A preconfigured WSL2 image is available for download:</p>
-<p><a href="https://drive.google.com/file/d/10vf-E5ylGC6YuHYWnAbQOMaJhIO0WocS/view?usp=sharing">Download WSL2 Image</a>
-To import the WSL2 environment, use the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">ivry-cli</span> <span class="p">&lt;</span><span class="n">path_to_wsl_directory</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="n">path_to_image</span><span class="p">.</span><span class="n">tar</span><span class="p">&gt;</span>
+<p><a href="https://drive.google.com/file/d/10vf-E5ylGC6YuHYWnAbQOMaJhIO0WocS/view?usp=sharing">Download WSL2 Image</a></p>
+<p>To import the WSL2 environment, use the following command:
+Note: You need to make sure you already created the directory for your wsl</p>
+<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">ivry-cli</span> <span class="p">&lt;</span><span class="n">path_you_want_to_put_wsl</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="n">path_to_image</span><span class="p">.</span><span class="n">tar</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">ivry-cli</span> <span class="n">C</span><span class="p">:\</span><span class="n">WSL</span><span class="p">\</span><span class="n">Ubuntu</span> <span class="n">C</span><span class="p">:\</span><span class="n">User</span><span class="p">\</span><span class="n">Downloads</span><span class="p">\</span><span class="n">ivry-cli</span><span class="p">.</span><span class="n">tar</span>   
+<div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">ivry-cli</span> <span class="n">C</span><span class="p">:\</span><span class="n">WSL</span> <span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">Downloads</span><span class="p">\</span><span class="n">ivry-cli</span><span class="p">.</span><span class="n">tar</span>   
 </code></pre></div>
 <p>Once imported, start the WSL2 instance with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">wsl</span> <span class="n">-d</span> <span class="n">ivry-cli</span>   
