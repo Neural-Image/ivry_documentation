@@ -53,6 +53,9 @@ It will show a simple introduction to the cli, you could use "q" to quit
 
 You need to go to our website and become a developer to get the apikey [ivry website](https://ivry.co/account)
 
+![api key](../assets/gif/getapikey.gif)
+
+
 And then, login from ivry cli:
 ```bash
 ivry login YOUR_API_KEY
@@ -67,6 +70,10 @@ ivry login YOUR_API_KEY
 ### **For ComfyUI creator:**
 
 1. Create your app on [ivry website](https://www.ivry.co/login)
+   
+    You need to prepare your comfyUI api workflow. You can get it by click this botton in comfyUI:
+
+    ![api workflow](../assets/gif/apiworkflow.gif)
 
 2. Pull your project to cli (windows users):
 

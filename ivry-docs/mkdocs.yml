@@ -10,6 +10,10 @@ nav:
       - Windows Installation: getting-started/windows.md
       - Linux Installation: getting-started/linux.md
       - Mac Installation: getting-started/mac.md
+  - Restart & Reconnect: 
+      - Windows: restart/windows.md
+      - Linux: restart/linux.md
+      - Mac: restart/mac.md
   - CLI Reference: reference.md
   - Troubleshooting: troubleshooting.md
   - Changelog: changelog.md

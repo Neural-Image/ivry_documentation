@@ -65,9 +65,10 @@ If you encounter any issues or want to install a specific Linux distribution, yo
 
     A preconfigured WSL2 image is available for download:
 
-    [Download WSL2 Image](https://drive.google.com/file/d/10vf-E5ylGC6YuHYWnAbQOMaJhIO0WocS/view?usp=sharing)
+    [Download WSL2 Image](https://drive.google.com/file/d/1XEkO8IDlrtp7CIyxSaRQdjDfc_wuMZw7/view?usp=sharing)
     
     To import the WSL2 environment, use the following command:
+
     Note: You need to make sure you already created the directory for your wsl
 
       ```powershell
@@ -217,9 +218,31 @@ We support comfyUI apps and python apps.
 The `--force` option allows you to terminate services that may be stuck or not responding to normal shutdown commands.
 
 ---
-## Troubleshooting Windows Installation
+## **Troubleshooting Windows Installation**
 
-### WSL Installation Issues
+### **1. ComfyUI does not run in background on Windows**
+
+Issue:
+
+On Windows, ComfyUI may appear to “pause” or stop responding when the window is not focused (e.g. when minimized or running in the background). This can lead to incomplete workflows or long delays in image generation if you switch to other applications.
+
+Cause:
+
+Some versions of Windows (especially on laptops with power-saving settings) throttle background GPU or Python processes. If ComfyUI is running inside a UI-based environment (like a browser or certain GUI launchers), the process may slow down significantly when the window is not focused.
+
+Solution:
+
+1.	Keep ComfyUI window in focus while running large or time-sensitive tasks. Avoid minimizing it or switching away during long generations.
+2.	Disable power-saving features:
+	•	Go to Settings > System > Power & Battery > Battery Saver and turn it off.
+	•	Also check Graphics Settings to ensure Python or your browser (if using WebUI) is set to High Performance.
+3.	Run ComfyUI in a standalone terminal:
+	•	Launch from cmd.exe or PowerShell instead of a GUI launcher.
+	•	Avoid running from within VS Code or IDEs unless necessary.
+4.	Use --disable-gpu-sleep (if available):
+	•	Some environments or tools allow arguments to keep GPU active — check your ComfyUI launcher or environment options.
+
+### **2. WSL Installation Issues**
 
 If you encounter problems installing WSL, check:
 
@@ -227,7 +250,7 @@ If you encounter problems installing WSL, check:
 2. That you're running a supported version of Windows 10/11
 3. The [official Microsoft WSL troubleshooting guide](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting)
 
-### Path Conversion Problems
+### **3. Path Conversion Problems**
 
 If you experience issues with file paths between Windows and WSL:
 
@@ -235,7 +258,7 @@ If you experience issues with file paths between Windows and WSL:
 2. Use the built-in path conversion utilities in Ivry CLI
 3. Test file access with simple commands like `cat` or `ls` before running complex operations
 
-### ComfyUI Connection Issues
+### **4. ComfyUI Connection Issues**
 
 If Ivry CLI cannot connect to ComfyUI:
 
